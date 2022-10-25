@@ -2,13 +2,13 @@ import {
     createBrowserRouter,
 } from "react-router-dom";
 import Main from "../Layout/Main";
-import Blog from "../Pages/BlogPage/Blog/Blog";
 import Courses from "../Pages/CoursesPage/Courses/Courses";
-import FAQ from "../Pages/FAQPage/FAQ/FAQ";
 import Home from "../Pages/HomePage/Home/Home";
 import Login from '../Pages/AuthenticationPage/LoginPage'
 import Register from '../Pages/AuthenticationPage/RegisterPage'
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import { Blog } from "../Pages/BlogPage/Blog/Blog";
+import FAQ from '../Pages/FAQPage/FAQ/FAQ'
 
 export const router = createBrowserRouter([
     {
