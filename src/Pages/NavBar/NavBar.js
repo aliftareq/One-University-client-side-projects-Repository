@@ -16,7 +16,7 @@ const NavBar = () => {
                             title="Company"
                             className="inline-flex items-center mr-8"
                         >
-                            <img src={logo} className='w-12' alt="" />
+                            <img src={logo} className='w-10' alt="" />
                             <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                                 One University
                             </span>
