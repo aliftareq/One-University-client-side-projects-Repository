@@ -97,19 +97,19 @@ export const Blog = () => {
                     </div>
                 </div>
                 <div className="space-y-4">
-                    <Item title="The quick, brown fox jumps over a lazy dog?">
+                    <Item title="What is cors?">
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                         accusantium doloremque rem aperiam, eaque ipsa quae.
                     </Item>
-                    <Item title="The first mate and his Skipper too will do?">
+                    <Item title="Why are you using firebase? What other options do you have to implement authentication?">
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                         accusantium doloremque rem aperiam, eaque ipsa quae.
                     </Item>
-                    <Item title="Is the Space Pope reptilian!?">
+                    <Item title="How does the private route work?">
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                         accusantium doloremque rem aperiam, eaque ipsa quae.
                     </Item>
-                    <Item title="How much money you got on you?">
+                    <Item title="What is Node? How does Node work?">
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                         accusantium doloremque rem aperiam, eaque ipsa quae.
                     </Item>

@@ -2,12 +2,12 @@ import React from 'react';
 
 const FAQ = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="px-4 py-16 mx-10 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                 <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                     <div>
-                        <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                            Brand new
+                        <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-green-500">
+                            Frequently Asked Question
                         </p>
                     </div>
                     <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
@@ -34,13 +34,11 @@ const FAQ = () => {
                                     height="24"
                                 />
                             </svg>
-                            <span className="relative">The</span>
-                        </span>{' '}
-                        quick, brown fox jumps over a lazy dog
+                        </span>
+                        Here are some Frequently asked question by our Visitor.
                     </h2>
                     <p className="text-base text-gray-700 md:text-lg">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                        You can find the answer of your doubt about our course curriculumn and our term and services.
                     </p>
                 </div>
             </div>
@@ -49,83 +47,56 @@ const FAQ = () => {
                     <div className="space-y-8">
                         <div>
                             <p className="mb-4 text-xl font-medium">
-                                The quick, brown fox jumps over a lazy dog?
+                                What do One-University courses include?
                             </p>
                             <p className="text-gray-700">
-                                Space, the final frontier. These are the voyages of the Starship
-                                Enterprise. Its five-year mission: to explore strange new
-                                worlds.
-                                <br />
-                                <br />
-                                Many say exploration is part of our destiny, but it’s actually
-                                our duty to future generations.
+                                Each One-Universiy course is created, owned and managed by the instructor(s). The foundation of each One-Universiy course are its lectures, which can include videos, slides, and text. In addition, instructors can add resources and various types of practice activities, as a way to enhance the learning experience of students.
                             </p>
                         </div>
                         <div>
                             <p className="mb-4 text-xl font-medium">
-                                The first mate and his Skipper too will do?
+                                How do I take a One-University course?
                             </p>
                             <p className="text-gray-700">
-                                Well, the way they make shows is, they make one show. That
-                                show's called a pilot.
-                                <br />
-                                <br />
-                                Then they show that show to the people who make shows, and on
-                                the strength of that one show they decide if they're going to
-                                make more shows. Some pilots get picked and become television
-                                programs.Some don't, become nothing. She starred in one of the
-                                ones that became nothing.
+                                One-Universiy courses are entirely on-demand and they can be accessed from several different devices and platforms, including a desktop, laptop, and our mobile app.
+
+                                After you enroll in a course, you can access it by clicking on the course link you will receive in your confirmation email (provided you’re logged into your One-Universiy account). You can also begin the course by logging in and navigating to your My learning page.
                             </p>
                         </div>
                         <div>
                             <p className="mb-4 text-xl font-medium">
-                                Is the Space Pope reptilian!?
+                                Is One-University an accredited institution? Do I receive anything after I complete a course?
                             </p>
                             <p className="text-gray-700">
-                                A flower in my garden, a mystery in my panties. Heart attack
-                                never stopped old Big Bear. I didn't even know we were calling
-                                him Big Bear.
+                                While One-University is not an accredited institution, we offer skills-based courses taught by real-world experts in their field. Every approved, paid course features a certificate of completion to document your accomplishment.
                             </p>
                         </div>
                     </div>
                     <div className="space-y-8">
                         <div>
                             <p className="mb-4 text-xl font-medium">
-                                How much money you got on you?
+                                Is there any way to preview a course?
                             </p>
                             <p className="text-gray-700">
-                                The first mate and his Skipper too will do their very best to
-                                make the others comfortable in their tropic island nest.
-                                <br />
-                                <br />
-                                Michael Knight a young loner on a crusade to champion the cause
-                                of the innocent. The helpless. The powerless in a world of
-                                criminals who operate above the law. Here he comes Here comes
-                                Speed Racer. He's a demon on wheels.
+                                Yes! Learn how to preview a course, and review key information about it. This article outlines how you can search One-Universiy’s ever-growing library, and find courses you’re interested in taking.
                             </p>
                         </div>
                         <div>
                             <p className="mb-4 text-xl font-medium">
-                                Galaxies Orion's sword globular star cluster?
+                                What if I don’t like a course I purchased?
                             </p>
                             <p className="text-gray-700">
-                                A business big enough that it could be listed on the NASDAQ goes
-                                belly up. Disappears!
-                                <br />
-                                <br />
-                                It ceases to exist without me. No, you clearly don't know who
-                                you're talking to, so let me clue you in.
+                                We want you to be satisfied, so all eligible courses purchased on One-Universiy can be refunded within 30 days. If you are unhappy with a course, you can request a refund, provided the request meets the guidelines in our refund policy.
                             </p>
                         </div>
                         <div>
                             <p className="mb-4 text-xl font-medium">
-                                When has justice ever been as simple as a rule book?
+                                Where can I go for help?
                             </p>
                             <p className="text-gray-700">
-                                This is not about revenge. This is about justice. A lot of
-                                things can change in twelve years, Admiral. Well, that's
-                                certainly good to know. About four years. I got tired of hearing
-                                how young I looked.
+                                If you find you have a question about a paid course while you’re taking it, you can search for answers to your question in the Q&A or ask the instructor.
+
+                                Our Help Center has extensive information regarding One-Universiy’s various features, and articles with troubleshooting steps to help you quickly resolve any issues you encounter. Our support team is also happy to help.
                             </p>
                         </div>
                     </div>
