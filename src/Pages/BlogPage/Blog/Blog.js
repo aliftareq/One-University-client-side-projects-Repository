@@ -98,20 +98,27 @@ export const Blog = () => {
                 </div>
                 <div className="space-y-4">
                     <Item title="What is cors?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                        Cross-Origin Resource Sharing <strong>(CORS)</strong> is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
                     </Item>
-                    <Item title="Why are you using firebase? What other options do you have to implement authentication?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item className='' title="Why are you using firebase? What other options do you have to implement authentication?">
+                        The Firebase Realtime Database <strong>lets you build rich, collaborative applications by allowing secure access</strong> to the database directly from client-side code.
+                        <br />
+                        <strong>The other options for Authentications are...</strong>
+                        <ul>
+                            <li>1.Back4App</li>
+                            <li>2.Backendless</li>
+                            <li>3.Kuzzle</li>
+                            <li>4.Pubnub</li>
+                            <li>5.Appwrite</li> etc.
+                        </ul>
                     </Item>
                     <Item title="How does the private route work?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                        The private route component is similar to the public route, the only change is that <strong>redirect URL and authenticate condition.</strong> If the user is not authenticated he will be redirected to the login page and the user can only access the authenticated routes If he is authenticated (Logged in).
                     </Item>
                     <Item title="What is Node? How does Node work?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                        <strong>Node.js</strong> is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine.
+                        <br />
+                        It is a used as backend service where javascript works on the server-side of the application. This way javascript is used on both frontend and backend. <strong> Node. js runs on chrome v8 engine which converts javascript code into machine code</strong>, it is highly scalable, lightweight, fast, and data-intensive
                     </Item>
                 </div>
             </div>
