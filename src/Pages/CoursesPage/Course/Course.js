@@ -3,7 +3,7 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
 
 const Course = ({ course }) => {
     const { short_title, Instructor, thumbnail_image } = course
-    console.log(course);
+    //console.log(course);
     return (
         <div>
             <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:w-60 lg:hover:-translate-y-2 hover:shadow-2xl">

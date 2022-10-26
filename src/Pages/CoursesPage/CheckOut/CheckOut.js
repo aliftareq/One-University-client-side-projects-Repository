@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const CheckOut = () => {
+    const course = useLoaderData()
+    const { id, title, Price } = course;
     return (
         <div className='px-8 py-8'>
             <div className='text-center text-4xl text-white font-bold bg-gray-800 px-4 py-4 my-4'>
@@ -33,11 +36,11 @@ const CheckOut = () => {
                             </p>
                         </div>
                     </div>
-                    <form novalidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid lg:text-start">
+                    <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid lg:text-start">
                         <div className=''>
-                            <p className='text-xl font-bold'>Order-Id : #<span>12435446576</span></p>
-                            <p className='text-xl font-bold'>Choosen-Course : <span>Python for Machine lerning</span></p>
-                            <p className='text-xl font-bold'>To-pay : $<span>45</span></p>
+                            <p className='text-xl font-bold'>Order-Id : #<span>{id}</span></p>
+                            <p className='text-xl font-bold'>Choosen-Course : <span>{title}</span></p>
+                            <p className='text-xl font-bold text-amber-300'>To-pay : $<span>{Price.Current_Price}</span></p>
                         </div>
                         <div>
                             <p>Order-Placed-By : <span>Koli mia</span></p>

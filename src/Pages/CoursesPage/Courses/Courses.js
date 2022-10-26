@@ -35,7 +35,7 @@ const Courses = () => {
                         <ul className='list-disc p-4'>
                             {
                                 courses.map(course =>
-                                    <Link key={course.id} to='/Course-details'>
+                                    <Link key={course.id} to={`/Course-details/${course.id}`}>
                                         <li className='text-xl font-bold my-4'>{course.short_title}</li>
                                     </Link>)
                             }
@@ -46,7 +46,7 @@ const Courses = () => {
                     <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 ">
                         {
                             courses.map(course =>
-                                <Link key={course.id} to='/Course-details'>
+                                <Link key={course.id} to={`/Course-details/${course.id}`}>
                                     <Course course={course}></Course>
                                 </Link>)
                         }
