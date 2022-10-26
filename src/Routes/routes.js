@@ -9,6 +9,8 @@ import Register from '../Pages/AuthenticationPage/RegisterPage'
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import { Blog } from "../Pages/BlogPage/Blog/Blog";
 import FAQ from '../Pages/FAQPage/FAQ/FAQ'
+import CourseDetails from "../Pages/CoursesPage/CourseDetails/CourseDetails";
+import CheckOut from "../Pages/CoursesPage/CheckOut/CheckOut";
 
 export const router = createBrowserRouter([
     {
@@ -44,6 +46,14 @@ export const router = createBrowserRouter([
                 path: '/sign-up',
                 element: <Register></Register>
             },
+            {
+                path: '/Course-details',
+                element: <CourseDetails></CourseDetails>
+            },
+            {
+                path: '/checkOut',
+                element: <CheckOut></CheckOut>
+            }
         ]
     },
 ]);
