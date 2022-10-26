@@ -38,7 +38,7 @@ const CheckOut = () => {
                     </div>
                     <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid lg:text-start">
                         <div className=''>
-                            <p className='text-xl font-bold'>Order-Id : #<span>{id}</span></p>
+                            <p className='text-sm lg:text-xl font-bold'>Order-Id : #<span>{id}</span></p>
                             <p className='text-xl font-bold'>Choosen-Course : <span>{title}</span></p>
                             <p className='text-xl font-bold text-amber-300'>To-pay : $<span>{Price.Current_Price}</span></p>
                         </div>

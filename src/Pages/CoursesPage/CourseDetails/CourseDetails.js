@@ -15,7 +15,7 @@ const CourseDetails = () => {
         <div className='mx-8 my-8'>
             <div className="  py-4 shadow-md bg-white text-gray-700 rounded-md">
                 <div className=' flex justify-center items-center bg-amber-500 my-4 p-4 text-center'>
-                    <h1 className='text-2xl lg:text-4xl font-bold'>{title}</h1> <FcPrint className='mx-8 text-4xl lg:text-6xl' />
+                    <h1 className='text-xl lg:text-4xl font-bold'>{title}</h1> <FcPrint className='mx-8 text-8xl lg:text-6xl' />
                 </div>
                 <div className=" p-4 lg:w-2/4 mx-auto space-y-4">
                     {/* title image */}
