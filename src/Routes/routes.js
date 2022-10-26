@@ -11,6 +11,7 @@ import { Blog } from "../Pages/BlogPage/Blog/Blog";
 import FAQ from '../Pages/FAQPage/FAQ/FAQ'
 import CourseDetails from "../Pages/CoursesPage/CourseDetails/CourseDetails";
 import CheckOut from "../Pages/CoursesPage/CheckOut/CheckOut";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -54,7 +55,7 @@ export const router = createBrowserRouter([
             {
                 path: '/checkOut/:id',
                 loader: ({ params }) => fetch(`https://one-university-server-side-9k8b2u70t-aliftareq.vercel.app/course/${params.id}`),
-                element: <CheckOut></CheckOut>
+                element: <PrivateRoutes><CheckOut></CheckOut></PrivateRoutes>
             }
         ]
     },

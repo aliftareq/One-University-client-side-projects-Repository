@@ -1,7 +1,45 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const LoginPage = () => {
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
+    const { signInWithEmail, signInwithGoogle, error, setError, setLoading } = useContext(AuthContext)
+
+    // handler 
+    const handlerSignIn = (e) => {
+        e.preventDefault()
+        const email = e.target.email.value
+        const password = e.target.password.value
+        signInWithEmail(email, password)
+            .then(result => {
+                console.log(result.user);
+                navigate(from, { replace: true })
+                //toast.success('SuccessFully Login')
+                setError('')
+            })
+            .catch(error => {
+                console.error(error)
+                toast.error(error.message)
+                setError(error.message);
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }
+    const handleGoogleSignIn = () => {
+        signInwithGoogle()
+            .then(result => {
+                console.log(result.user);
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                console.error(error.message);
+            })
+    }
     return (
         <div className='flex justify-center items-center py-8'>
             <div className='flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900'>
@@ -12,6 +50,7 @@ const LoginPage = () => {
                     </p>
                 </div>
                 <form
+                    onSubmit={handlerSignIn}
                     noValidate=''
                     action=''
                     className='space-y-6 ng-untouched ng-pristine ng-valid'
@@ -28,6 +67,7 @@ const LoginPage = () => {
                                 placeholder='Enter Your Email Here'
                                 className='w-full px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200 text-gray-900'
                                 data-temp-mail-org='0'
+                                required
                             />
                         </div>
                         <div>
@@ -42,8 +82,10 @@ const LoginPage = () => {
                                 id='password'
                                 placeholder='*******'
                                 className='w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-200 focus:border-gray-900 text-gray-900'
+                                required
                             />
                         </div>
+                        <p className='text-lg text-red-500'>{error}</p>
                     </div>
 
                     <div>
@@ -68,7 +110,7 @@ const LoginPage = () => {
                     <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
                 </div>
                 <div className='flex justify-center space-x-4'>
-                    <button aria-label='Log in with Google' className='p-3 rounded-sm'>
+                    <button onClick={handleGoogleSignIn} aria-label='Log in with Google' className='p-3 rounded-sm'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 32 32'

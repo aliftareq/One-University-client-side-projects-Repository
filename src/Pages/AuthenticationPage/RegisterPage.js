@@ -1,7 +1,83 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider'
 
 const Register = () => {
+    //states
+    const [error, setError] = useState('')
+    const [accept, setAccept] = useState(false)
+
+    //hooks and destructured data.
+    const navigate = useNavigate()
+    const { createUser, signInwithGoogle, updateUserProfile, varifyEmail } = useContext(AuthContext)
+
+    //handler 
+    //1
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const name = e.target.name.value;
+        const photoUrl = e.target.PhotoURL.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+        //console.log(name, photoUrl, email, password);
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                navigate('/')
+                setError('')
+                handleUpdateUserProfile(name, photoUrl)
+                handleEmailVerification()
+
+            })
+            .catch(error => {
+                toast.error(error.message)
+                console.error(error)
+                setError(error.message);
+            })
+    }
+    //2
+    const handleUpdateUserProfile = (name, photoUrl) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoUrl,
+        }
+        updateUserProfile(profile)
+            .then(() => {
+                console.log('profile updated');
+            })
+            .catch(error => {
+                console.error(error);
+                toast.error(error.message)
+            })
+    }
+    //3
+    const handleEmailVerification = () => {
+        varifyEmail()
+            .then(() => {
+                //toast.success('Registration Successful!!! A verificatin mail sent , please verify')
+            })
+            .catch(error => {
+                console.error(error);
+                toast.error(error.message)
+            })
+    }
+    //4
+    const handleGoogleSignIn = () => {
+        signInwithGoogle()
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.error(error.message);
+            })
+    }
+    //
+    const handleAccepted = (e) => {
+        console.log('clicked');
+        setAccept(e.target.checked)
+    }
     return (
         <div className='flex justify-center items-center py-8'>
             <div className='flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900'>
@@ -10,6 +86,7 @@ const Register = () => {
                     <p className='text-sm text-gray-400'>Create a new account</p>
                 </div>
                 <form
+                    onSubmit={handleSubmit}
                     noValidate=''
                     action=''
                     className='space-y-12 ng-untouched ng-pristine ng-valid'
@@ -26,6 +103,7 @@ const Register = () => {
                                 placeholder='Enter Your Name Here'
                                 className='w-full px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200 text-gray-900'
                                 data-temp-mail-org='0'
+                                required
                             />
                         </div>
                         <div>
@@ -39,6 +117,7 @@ const Register = () => {
                                 placeholder='Enter Your PhotoURL Here'
                                 className='w-full px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200 text-gray-900'
                                 data-temp-mail-org='0'
+                                required
                             />
                         </div>
                         <div>
@@ -52,6 +131,7 @@ const Register = () => {
                                 placeholder='Enter Your Email Here'
                                 className='w-full px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200 text-gray-900'
                                 data-temp-mail-org='0'
+                                required
                             />
                         </div>
                         <div>
@@ -66,7 +146,15 @@ const Register = () => {
                                 id='password'
                                 placeholder='*******'
                                 className='w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-200 focus:border-gray-900 text-gray-900'
+                                required
                             />
+                        </div>
+                        <p className='text-lg text-red-500'>{error}</p>
+                        <div className="flex items-center">
+                            <input type="checkbox" onClick={handleAccepted} name="remember" id="remember" aria-label="Remember me" className="mr-1 rounded-sm focus:ring-violet-400 focus:dark:border-violet-400 focus:ring-2 accent-violet-400" />
+                            <label htmlFor="remember" className="text-sm dark:text-gray-400">
+                                I accept <Link className='text-blue-500' to='/'>Terms & condition</Link>
+                            </label>
                         </div>
                     </div>
                     <div className='space-y-2'>
@@ -88,7 +176,7 @@ const Register = () => {
                     <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
                 </div>
                 <div className='flex justify-center space-x-4'>
-                    <button aria-label='Log in with Google' className='p-3 rounded-sm'>
+                    <button onClick={handleGoogleSignIn} aria-label='Log in with Google' className='p-3 rounded-sm'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 32 32'

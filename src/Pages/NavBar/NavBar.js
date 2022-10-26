@@ -1,9 +1,22 @@
 import React from 'react';
+import { useContext } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import logo from '../../resources/logo/one-university-removebg.png'
 
 const NavBar = () => {
+    const { user, LogOut } = useContext(AuthContext)
+    //console.log(user);
+
+    //navigation 
+    const navigate = useNavigate()
+
+    //handler
+    const handleSignOut = () => {
+        LogOut()
+        navigate('/login')
+    }
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className="bg-gray-900">
@@ -65,26 +78,56 @@ const NavBar = () => {
                         </ul>
                     </div>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
-                        <li>
-                            <Link
-                                to="/login"
-                                aria-label="Sign in"
-                                title="Sign in"
-                                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                            >
-                                Sign in
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/sign-up"
-                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-600 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                                aria-label="Sign up"
-                                title="Sign up"
-                            >
-                                Sign up
-                            </Link>
-                        </li>
+                        {
+                            user && user?.uid
+                                ? <>
+                                    <li>
+                                        <Link
+                                            to="/"
+                                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-600 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                            aria-label="Sign up"
+                                            title={user?.displayName ? user?.displayName : 'Annonymous'}
+                                        >
+                                            user-Profile
+                                        </Link>
+                                    </li>
+                                    <li onClick={handleSignOut}>
+                                        <Link
+                                            to="/login"
+                                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-600 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                            aria-label="Sign up"
+                                            title="Log-out"
+                                        >
+                                            Log-out
+                                        </Link>
+                                    </li>
+                                </>
+                                : <>
+                                    <li>
+                                        <Link
+                                            to="/login"
+                                            aria-label="Sign in"
+                                            title="Sign in"
+                                            className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                                        >
+                                            Sign in
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="/sign-up"
+                                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-600 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                            aria-label="Sign up"
+                                            title="Sign up"
+                                        >
+                                            Sign up
+                                        </Link>
+                                    </li>
+                                </>
+
+                        }
+
+
                     </ul>
                     <div className="lg:hidden">
                         <button
