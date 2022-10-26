@@ -6,6 +6,7 @@ import { HiOutlineFolderDownload } from 'react-icons/hi';
 import { CgInfinity } from "react-icons/cg";
 import { ImMobile } from "react-icons/im";
 import { GiTrophyCup } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 
 const CourseDetails = () => {
     return (
@@ -17,7 +18,7 @@ const CourseDetails = () => {
                 <div className=" p-4 lg:w-2/4 mx-auto space-y-4">
                     {/* title image */}
                     <div className="space-y-2">
-                        <img src="https://source.unsplash.com/random/480x360/?4" alt="" className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
+                        <img src="https://cloudinary.hbs.edu/hbsit/image/upload/s--t0VCSLtL--/f_auto,c_fill,h_375,w_750,/v20200101/DD0ADFB33B94C859E168F31C10137776.jpg" alt="" className="block object-center w-full rounded-md h-72 dark:bg-gray-500" />
                     </div>
                     {/* prices */}
                     <div className="space-y-2">
@@ -78,10 +79,12 @@ const CourseDetails = () => {
                     </div>
                     {/* get premium access */}
                     <div className='flex justify-center'>
-                        <button type="button" className="relative px-8 py-4 ml-4 overflow-hidden rounded font-bold bg-amber-400 hover:bg-amber-500  text-gray-900">
-                            Get premium access.
-                            <span className="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 bg-purple-700">New</span>
-                        </button>
+                        <Link to='/checkOut'>
+                            <button type="button" className="relative px-8 py-4 ml-4 overflow-hidden rounded font-bold bg-amber-400 hover:bg-amber-500  text-gray-900">
+                                Get premium access.
+                                <span className="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 bg-purple-700">New</span>
+                            </button>
+                        </Link>
                     </div>
                     <div className='flex justify-around'>
                         <p className='font-bold'><u>Share</u></p>

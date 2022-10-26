@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Course from '../Course/Course';
 
 const Courses = () => {
+    const [courses, setCourses] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:5000/courses')
+            .then(res => res.json())
+            .then(data => setCourses(data))
+    }, [])
     return (
         <div className='mx-8 my-8'>
             <div className="px-8 py-6 lg:w-3/4 mx-auto bg-violet-400 text-gray-900 rounded">
@@ -20,29 +27,29 @@ const Courses = () => {
                 </div>
             </div>
             <div className='lg:flex my-8'>
-                <div className='grid col-span-4 px-4 py-8 shadow-lg mx-4 my-4 lg:my-0 bg-white rounded'>
+                <div className='col-span-4 px-6 py-8 shadow-lg mx-4 my-4 lg:my-0 bg-white rounded'>
                     <div className=''>
-                        <h1 className='text-2xl font-bold border-2'>The list of the courses</h1>
+                        <h1 className='text-4xl font-bold text-center'>List of the courses</h1>
                     </div>
                     <div className=''>
                         <ul className='list-disc p-4'>
-                            <li className='text-xl font-bold'>Coures -1</li>
-                            <li className='text-xl font-bold'>Coures -1</li>
-                            <li className='text-xl font-bold'>Coures -1</li>
-                            <li className='text-xl font-bold'>Coures -1</li>
-                            <li className='text-xl font-bold'>Coures -1</li>
-                            <li className='text-xl font-bold'>Coures -1</li>
+                            {
+                                courses.map(course =>
+                                    <Link key={course.id} to='/Course-details'>
+                                        <li className='text-xl font-bold my-4'>{course.short_title}</li>
+                                    </Link>)
+                            }
                         </ul>
                     </div>
                 </div>
                 <div className='grid col-span-8 p-10 shadow-xl bg-white rounded-md'>
                     <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 ">
-                        <Course></Course>
-                        <Course></Course>
-                        <Course></Course>
-                        <Course></Course>
-                        <Course></Course>
-                        <Course></Course>
+                        {
+                            courses.map(course =>
+                                <Link key={course.id} to='/Course-details'>
+                                    <Course course={course}></Course>
+                                </Link>)
+                        }
                     </div>
                 </div>
             </div>
