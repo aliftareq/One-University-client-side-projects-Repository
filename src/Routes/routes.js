@@ -48,12 +48,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/Course-details/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`),
+                loader: ({ params }) => fetch(`https://one-university-server-side-9k8b2u70t-aliftareq.vercel.app/course/${params.id}`),
                 element: <CourseDetails></CourseDetails>
             },
             {
                 path: '/checkOut/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`),
+                loader: ({ params }) => fetch(`https://one-university-server-side-9k8b2u70t-aliftareq.vercel.app/course/${params.id}`),
                 element: <CheckOut></CheckOut>
             }
         ]
