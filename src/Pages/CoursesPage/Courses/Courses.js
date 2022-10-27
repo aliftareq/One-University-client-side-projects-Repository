@@ -26,7 +26,7 @@ const Courses = () => {
                     </div>
                 </div>
             </div>
-            <div className='lg:flex my-8'>
+            <div className='lg:flex justify-center my-8'>
                 <div className='col-span-4 px-6 py-8 shadow-lg mx-4 my-4 lg:my-0 bg-white rounded'>
                     <div className=''>
                         <h1 className='text-4xl font-bold text-center'>List of the courses</h1>
@@ -36,7 +36,7 @@ const Courses = () => {
                             {
                                 courses.map(course =>
                                     <Link key={course.id} to={`/Course-details/${course.id}`}>
-                                        <li className='text-xl font-bold my-4'>{course.short_title}</li>
+                                        <li className='text-xl font-bold my-4 bg-sky-300 px-4 py-2 rounded-md text-slate-900 hover:bg-sky-400'>{course.short_title}</li>
                                     </Link>)
                             }
                         </ul>

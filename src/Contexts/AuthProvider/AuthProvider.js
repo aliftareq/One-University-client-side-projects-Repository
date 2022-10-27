@@ -24,24 +24,29 @@ const AuthProvider = ({ children }) => {
         setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
-
     //2
+    const signInwithGithub = () => {
+        setLoading(true)
+        return signInWithPopup(auth, GithubProvider)
+    }
+
+    //3
     const createUser = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    //3
+    //4
     const signInWithEmail = (email, password) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
-    //4
+    //5
     const updateUserProfile = (profile) => {
         return updateProfile(auth.currentUser, profile)
     }
 
-    //5 
+    //6
     const varifyEmail = () => {
         return sendEmailVerification(auth.currentUser)
     }
@@ -69,6 +74,7 @@ const AuthProvider = ({ children }) => {
         setDay,
         setUser,
         signInwithGoogle,
+        signInwithGithub,
         createUser,
         signInWithEmail,
         LogOut,

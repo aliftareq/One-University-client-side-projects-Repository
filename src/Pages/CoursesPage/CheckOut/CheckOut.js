@@ -47,7 +47,7 @@ const CheckOut = () => {
                         </div>
                         <div>
                             <p>Order-Placed-By : <span>{user?.displayName ? user?.displayName : 'No Name Found'}</span></p>
-                            <p>Email : <span>{user?.email ? user?.email : 'No Name Found'}</span></p>
+                            <p>Email : <span>{user?.email ? user?.email : 'No Email Found'}</span></p>
                             <p>Mobile-No : <span>01717-151515</span></p>
                         </div>
                         <div>
