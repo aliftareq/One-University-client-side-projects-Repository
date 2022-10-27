@@ -1,16 +1,16 @@
 # One University projects Repository
-
-An online Edtech platform for Practice and develop tech skills at an extremely affordable subscription fee. It also help with carrear guideline and Job placement for the enrolled and successfully Graduated student from One-universite. To explore more click the following live site link.
+ 
+An online Edtech platform for Practice and develop tech skills at an extremely affordable subscription fee. It also helps with career guidelines and Job placement for the enrolled and successfully Graduated student from One-universite. To explore more click the following live site link.
  
 ***
 ## What was done in this project(Description):
-* The main focus of this project was Practicing and implement the use of react-router & firebase Authentication. So, I applied  React-router to navigate pages from one place to another .
+* The main focus of this project was Practicing and implementing the use of react-router & firebase Authentication. So, I applied  React-router to navigate pages from one place to another .
 * Also Implemented Login and signup with Email-password , google , github with the help of firebase.
-* I implemented a Icon button make a pdf page of Course details with the help of "react-to-pdf" package.
-*  There is also added a Feature of Private route while user will checkout for purchasing the course. If user is not logged in in he/she cant be go to checkout page until user get logged in.
-* In some porttion i have used react "useContext" hook to distrubute the user data and the others function through the Project code and files.
-*  There many kind of functionlities have implemented , most importantly "useAuthStateChange" for hold the state of user and unSubscribe function for preventing mamory leak.
-* Laslty, the I tried to implemented toggling and dark and day theme and used many kind of hooks and react-icons so on. so that the site look nice and meaningful.
+* I implemented an Icon-button to make a pdf page of Course-details with the help of the "react-to-pdf" package.
+*  There is also added a Feature of Private route while users will checkout for purchasing the course. If a user is not logged in he/she can't go to the checkout page until the user gets logged in.
+* In some portions I have used the react "useContext" hook to distribute the user data and the others function through the Project code and files.
+*  There many kinds of functionalities have been implemented , most importantly "useAuthStateChange '' for holding the state of the user and the unSubscribe function for preventing memory leak.
+* Lastly, I tried to implement toggling and dark and day themes and used many kinds of hooks and react-icons and so on. so that the site looks nice and meaningful.
 
 ## Live Link
 ***
