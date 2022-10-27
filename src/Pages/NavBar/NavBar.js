@@ -26,7 +26,7 @@ const NavBar = () => {
                         <Link
                             to="/"
                             aria-label="Company"
-                            title="Company"
+                            title="One University"
                             className="inline-flex items-center mr-8"
                         >
                             <img src={logo} className='w-10' alt="" />
@@ -39,7 +39,7 @@ const NavBar = () => {
                                 <Link
                                     to="/"
                                     aria-label="Our product"
-                                    title="Our product"
+                                    title="Home"
                                     className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                                 >
                                     Home
@@ -49,7 +49,7 @@ const NavBar = () => {
                                 <Link
                                     to="/courses"
                                     aria-label="Our product"
-                                    title="Our product"
+                                    title="Courses"
                                     className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                                 >
                                     Courses
@@ -59,7 +59,7 @@ const NavBar = () => {
                                 <Link
                                     to="/blog"
                                     aria-label="Product pricing"
-                                    title="Product pricing"
+                                    title="Blog"
                                     className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                                 >
                                     Blog
@@ -69,7 +69,7 @@ const NavBar = () => {
                                 <Link
                                     to="/faq"
                                     aria-label="About us"
-                                    title="About us"
+                                    title="Frequently Asked Question"
                                     className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                                 >
                                     FAQ
@@ -107,7 +107,7 @@ const NavBar = () => {
                                         <Link
                                             to="/login"
                                             aria-label="Sign in"
-                                            title="Sign in"
+                                            title="Log-in"
                                             className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                                         >
                                             Log-in
@@ -159,7 +159,7 @@ const NavBar = () => {
                                             <Link
                                                 to="/"
                                                 aria-label="Company"
-                                                title="Company"
+                                                title="One University"
                                                 className="inline-flex items-center"
                                             >
                                                 <img src={logo} className='w-8' alt="" />
@@ -189,8 +189,8 @@ const NavBar = () => {
                                             <li>
                                                 <Link
                                                     to="/home"
-                                                    aria-label="Our product"
-                                                    title="Our product"
+                                                    aria-label="Home"
+                                                    title="Home"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Home
@@ -199,8 +199,8 @@ const NavBar = () => {
                                             <li>
                                                 <Link
                                                     to="/courses"
-                                                    aria-label="Our product"
-                                                    title="Our product"
+                                                    aria-label="Courses"
+                                                    title="Courses"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Courses
@@ -209,8 +209,8 @@ const NavBar = () => {
                                             <li>
                                                 <Link
                                                     to="/blog"
-                                                    aria-label="Product pricing"
-                                                    title="Product pricing"
+                                                    aria-label="Blog"
+                                                    title="Blog"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Blog
@@ -219,8 +219,8 @@ const NavBar = () => {
                                             <li>
                                                 <Link
                                                     to="/faq"
-                                                    aria-label="About us"
-                                                    title="About us"
+                                                    aria-label="Frequently Asked Question"
+                                                    title="Frequently Asked Question"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     FAQ
@@ -229,11 +229,11 @@ const NavBar = () => {
                                             <li>
                                                 <Link
                                                     to="/login"
-                                                    aria-label="Sign in"
-                                                    title="Sign in"
+                                                    aria-label="Log-in"
+                                                    title="Log-in"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    Sign in
+                                                    Log-in
                                                 </Link>
                                             </li>
                                             <li>

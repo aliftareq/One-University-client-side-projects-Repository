@@ -1,8 +1,11 @@
 import React from 'react';
+import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const CheckOut = () => {
     const course = useLoaderData()
+    const { user } = useContext(AuthContext)
     const { id, title, Price } = course;
     return (
         <div className='px-8 py-8'>
@@ -43,8 +46,8 @@ const CheckOut = () => {
                             <p className='text-xl font-bold text-amber-300'>To-pay : $<span>{Price.Current_Price}</span></p>
                         </div>
                         <div>
-                            <p>Order-Placed-By : <span>Koli mia</span></p>
-                            <p>Email : <span>Koli@gmail.com</span></p>
+                            <p>Order-Placed-By : <span>{user?.displayName ? user?.displayName : 'No Name Found'}</span></p>
+                            <p>Email : <span>{user?.email ? user?.email : 'No Name Found'}</span></p>
                             <p>Mobile-No : <span>01717-151515</span></p>
                         </div>
                         <div>
