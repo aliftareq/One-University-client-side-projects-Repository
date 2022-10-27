@@ -14,7 +14,7 @@ An online Edtech platform for Practice and develop tech skills at an extremely a
 
 ## Live Link
 ***
-Hosted in Netlify -> [Quiz Ace](https://quiz-ace.netlify.app/)
+Hosted in firebase -> [One University](https://project-one-university.web.app/)
 
 ## Technologies
 ***
