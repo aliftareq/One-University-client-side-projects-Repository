@@ -6,16 +6,22 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import logo from '../../resources/logo/one-university-removebg.png'
 
 const NavBar = () => {
-    const { user, LogOut } = useContext(AuthContext)
-    console.log(user);
+    const { user, LogOut, day, setDay } = useContext(AuthContext)
+    //console.log(user);
 
     //navigation 
     const navigate = useNavigate()
 
     //handler
+    //1
     const handleSignOut = () => {
         LogOut()
         navigate('/login')
+    }
+    //2
+    const handleDayAndNight = () => {
+        setDay(!day)
+        //console.log(day);
     }
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
@@ -76,8 +82,19 @@ const NavBar = () => {
                                 </Link>
                             </li>
                         </ul>
+                        {/* dard and day theme toggle button here */}
+                        <label htmlFor="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer text-gray-100 mx-6">
+                            <span>Day</span>
+                            <span className="relative">
+                                <input onClick={handleDayAndNight} id="Toggle1" type="checkbox" className="hidden peer" />
+                                <div className="w-10 h-6 rounded-full shadow-inner bg-gray-400 peer-checked:bg-violet-400"></div>
+                                <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto bg-gray-800"></div>
+                            </span>
+                            <span>Night</span>
+                        </label>
                     </div>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
+                        {/* conditional rendering based on user logged in or not */}
                         {
                             user && user?.uid
                                 ? <>
@@ -137,8 +154,6 @@ const NavBar = () => {
                                 </>
 
                         }
-
-
                     </ul>
                     <div className="lg:hidden">
                         <button
@@ -237,6 +252,7 @@ const NavBar = () => {
                                                     FAQ
                                                 </Link>
                                             </li>
+                                            {/* conditional rendering based on user logged in or not */}
                                             {
                                                 user && user?.uid
                                                     ? <>

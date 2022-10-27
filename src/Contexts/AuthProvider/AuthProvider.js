@@ -16,6 +16,7 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(true)
+    const [day, setDay] = useState(true)
 
     //handlers
     //1
@@ -44,12 +45,13 @@ const AuthProvider = ({ children }) => {
     const varifyEmail = () => {
         return sendEmailVerification(auth.currentUser)
     }
-    //
+    //7
     const LogOut = () => {
         setLoading(true)
         signOut(auth)
     }
 
+    // this hook is for triggering and change the state for login and logout.
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser)
@@ -63,6 +65,8 @@ const AuthProvider = ({ children }) => {
         user,
         error,
         loading,
+        day,
+        setDay,
         setUser,
         signInwithGoogle,
         createUser,
