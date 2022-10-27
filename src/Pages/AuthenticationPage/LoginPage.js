@@ -18,7 +18,7 @@ const LoginPage = () => {
             .then(result => {
                 console.log(result.user);
                 navigate(from, { replace: true })
-                //toast.success('SuccessFully Login')
+                toast.success('Logged-in Successful')
                 setError('')
             })
             .catch(error => {
@@ -35,9 +35,11 @@ const LoginPage = () => {
             .then(result => {
                 console.log(result.user);
                 navigate(from, { replace: true })
+                toast.success('Successfully Logged-in with Google')
             })
             .catch(error => {
                 console.error(error.message);
+                toast.error(error.message)
             })
     }
     return (

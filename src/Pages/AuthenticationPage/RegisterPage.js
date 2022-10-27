@@ -56,7 +56,7 @@ const Register = () => {
     const handleEmailVerification = () => {
         varifyEmail()
             .then(() => {
-                //toast.success('Registration Successful!!! A verificatin mail sent , please verify')
+                toast.success('Registration Successful!!! A verificatin mail sent to your e-mail, please verify!!!')
             })
             .catch(error => {
                 console.error(error);
@@ -68,9 +68,11 @@ const Register = () => {
         signInwithGoogle()
             .then(result => {
                 console.log(result.user);
+                toast.success('Successfully registered with Google')
             })
             .catch(error => {
                 console.error(error.message);
+                toast.error(error.message)
             })
     }
     //
