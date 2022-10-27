@@ -1,16 +1,19 @@
-# Quiz-Ace projects Repository
+# One University projects Repository
 
-A Quiz platform for Practice and develop tech skills at an extremely affordable subscription fee.
+An online Edtech platform for Practice and develop tech skills at an extremely affordable subscription fee. It also help with carrear guideline and Job placement for the enrolled and successfully Graduated student from One-universite. To explore more click the following live site link.
  
 ***
-What was done in this project(Description):
-* The main focus of this project was learning the use of react-router . So, I applied  React-router to navigate pages from one place to another.
-* Also I applied Re-chart and added a bar chart and showed it on the Statistics page UI.
-*  I also applied toast component with help of "tostify" package to use it to verify answer of a quiz given by an user valid or not.
-* I made the website responsive , it is responsive on small devices(mobile), Tablet, and large Screen.
-*  Lastly, I used different types of hooks like(useState, useLoaderData) to add functionality and make this site efficient and smooth.
+## What was done in this project(Description):
+* The main focus of this project was Practicing and implement the use of react-router & firebase Authentication. So, I applied  React-router to navigate pages from one place to another .
+* Also Implemented Login and signup with Email-password , google , github with the help of firebase.
+* I implemented a Icon button make a pdf page of Course details with the help of "react-to-pdf" package.
+*  There is also added a Feature of Private route while user will checkout for purchasing the course. If user is not logged in in he/she cant be go to checkout page until user get logged in.
+* In some porttion i have used react "useContext" hook to distrubute the user data and the others function through the Project code and files.
+*  There many kind of functionlities have implemented , most importantly "useAuthStateChange" for hold the state of user and unSubscribe function for preventing mamory leak.
+* Laslty, the I tried to implemented toggling and dark and day theme and used many kind of hooks and react-icons so on. so that the site look nice and meaningful.
 
 ## Live Link
+***
 Hosted in Netlify -> [Quiz Ace](https://quiz-ace.netlify.app/)
 
 ## Technologies
@@ -19,21 +22,27 @@ A list of technologies used within the project:
 * [React](https://reactjs.org/): Version 18.2.0
 * [React router](https://reactrouter.com/en/main): Version 6.4.2
 * [React tostify](https://www.npmjs.com/package/react-toastify): Version 9.0.8
+* [firebase](https://firebase.google.com/docs/auth/web/start?hl=en&authuser=0): Version 10.0.0
+* [React to Pdf](https://www.npmjs.com/package/react-to-pdf): Version 9.0.8
 
 
 ## React Router Dom v6.4 
+***
 Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
 
 ## Resources & Credits
+***
 Tailwind Components -> 
 [Kitwind](https://kitwind.io/products/kometa/components)
+[mambaUI](https://www.mambaui.com/components)
 
-## QUIZ API LINK:
-* Get all quiz topics: -> (https://openapi.programming-hero.com/api/quiz)
-* Get topic details by topic id: -> (https://openapi.programming-hero.com/api/quiz/${id})
-* Example: -> (https://openapi.programming-hero.com/api/quiz/1)
+## One University API Links:
+***
+* Get all Courses topics: -> (https://one-university-server-side.vercel.app/courses)
+* Get single course details by topic id: -> (https://one-university-server-side.vercel.app/course/${id})
+* Example: -> (https://one-university-server-side.vercel.app/course/0282e0e58a5c404fbd15261f11c2ab6a)
 
 ## Other Resources
-* Icon -> [HeroIcon](https://heroicons.com/)
-* Icon Documentation-> [Icon documentaion](https://github.com/tailwindlabs/heroicons)
+***
+* Icon -> [React Icons](https://react-icons.github.io/react-icons/)
 * FavIcon -> [Freepic](https://www.freepik.com/)

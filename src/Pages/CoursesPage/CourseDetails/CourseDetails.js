@@ -1,5 +1,6 @@
 import React from 'react';
-import { FcPrint, FcClock } from 'react-icons/fc';
+import Pdf from "react-to-pdf";
+import { FcClock } from 'react-icons/fc';
 import { FiYoutube } from 'react-icons/fi';
 import { RiArticleLine } from 'react-icons/ri';
 import { HiOutlineFolderDownload } from 'react-icons/hi';
@@ -7,17 +8,32 @@ import { CgInfinity } from "react-icons/cg";
 import { ImMobile } from "react-icons/im";
 import { GiTrophyCup } from "react-icons/gi";
 import { Link, useLoaderData } from 'react-router-dom';
+import { BsFillFileEarmarkPdfFill } from "react-icons/bs";
+import PdfPage from '../PdfPage/PdfPage';
 
 const CourseDetails = () => {
+    //loading course data
     const course = useLoaderData()
-    const { id, title, title_image, Price, time_left, course_Include, details } = course
+    //destructuring data from course.
+    const { id, title, short_title, title_image, Price, time_left, course_Include, details } = course
+    //getting the pdf reference
+    const ref = React.createRef();
     return (
         <div className='mx-8 my-8'>
             <div className="  py-4 shadow-md bg-white text-gray-700 rounded-md">
                 <div className=' flex justify-center items-center bg-amber-500 my-4 p-4 text-center'>
-                    <h1 className='text-xl lg:text-4xl font-bold'>{title}</h1> <FcPrint className='mx-8 text-8xl lg:text-6xl' />
+                    <h1 className='text-xl lg:text-4xl font-bold'>{title}</h1>
+                    {/* pdf making button here */}
+                    <Pdf targetRef={ref} filename={`${short_title}.pdf`}>
+                        {({ toPdf }) =>
+                            <button onClick={toPdf}>
+                                <BsFillFileEarmarkPdfFill className='mx-8 text-6xl lg:text-6xl bg-yellow-300 border-2 border-yellow-200 px-2 py2 rounded hover:bg-green-400' title='make a pdf of this page' />
+                            </button>
+                        }
+                    </Pdf>
                 </div>
-                <div className=" p-4 lg:w-2/4 mx-auto space-y-4">
+                {/* pdf reference value */}
+                <div ref={ref} className=" p-4 lg:w-2/4 mx-auto space-y-4">
                     {/* title image */}
                     <div className="space-y-2">
                         <img src={title_image} alt="" className="block object-center w-full rounded-md h-72 dark:bg-gray-500" />
