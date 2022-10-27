@@ -81,7 +81,7 @@ const Register = () => {
             .then(result => {
                 console.log(result.user);
                 navigate('/')
-                toast.success('Successfully Logged-in with Github')
+                toast.success('Successfully registered with Github')
             })
             .catch(error => {
                 console.error(error.message);
