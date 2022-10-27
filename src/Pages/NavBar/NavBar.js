@@ -243,22 +243,23 @@ const NavBar = () => {
                                                         <li>
                                                             <Link
                                                                 to="/"
-                                                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-600 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                                                 aria-label="Sign up"
                                                                 title={user?.displayName ? user?.displayName : 'Annonymous'}
                                                             >
-                                                                user-Profile
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <div className="flex flex-col items-center justify-center">
-                                                                <div className="flex flex-wrap gap-x-2 gap-y-2">
-                                                                    <div className="relative flex-shrink-0">
-                                                                        <span className="absolute bottom-0 right-0 w-4 h-4 dark:bg-green-600 border rounded-full dark:text-gray-100 dark:border-gray-900"></span>
-                                                                        <img src="https://source.unsplash.com/50x50/?portrait" alt="" className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700" />
+                                                                <div className="flex flex-col items-center justify-center">
+                                                                    <div className="flex flex-wrap gap-x-2 gap-y-2">
+                                                                        <div className="relative flex-shrink-0">
+                                                                            <span className="absolute bottom-0 right-0 w-4 h-4 bg-green-600 border rounded-full dark:text-gray-100 dark:border-gray-900"></span>
+                                                                            {
+                                                                                user?.photoURL
+                                                                                    ? <img src={user?.photoURL} alt="" className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700" />
+                                                                                    : <img src="https://media.istockphoto.com/vectors/user-member-vector-icon-for-ui-user-interface-or-profile-face-avatar-vector-id1130884625?k=20&m=1130884625&s=612x612&w=0&h=OITK5Otm_lRj7Cx8mBhm7NtLTEHvp6v3XnZFLZmuB9o=" alt="" className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700" />
+                                                                            }
+
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            </Link>
                                                         </li>
                                                         <li onClick={handleSignOut}>
                                                             <Link
