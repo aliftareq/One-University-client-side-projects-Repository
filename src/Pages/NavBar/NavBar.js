@@ -36,7 +36,7 @@ const NavBar = () => {
                             className="inline-flex items-center mr-8"
                         >
                             <img src={logo} className='w-10' alt="" />
-                            <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
+                            <span className="ml-2 text-sm lg:text-xl font-bold tracking-wide text-gray-100 uppercase">
                                 One University
                             </span>
                         </Link>
