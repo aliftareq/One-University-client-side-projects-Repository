@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Quiz-Ace projects Repository
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Quiz platform for Practice and develop tech skills at an extremely affordable subscription fee.
+ 
+***
+What was done in this project(Description):
+* The main focus of this project was learning the use of react-router . So, I applied  React-router to navigate pages from one place to another.
+* Also I applied Re-chart and added a bar chart and showed it on the Statistics page UI.
+*  I also applied toast component with help of "tostify" package to use it to verify answer of a quiz given by an user valid or not.
+* I made the website responsive , it is responsive on small devices(mobile), Tablet, and large Screen.
+*  Lastly, I used different types of hooks like(useState, useLoaderData) to add functionality and make this site efficient and smooth.
 
-## Available Scripts
+## Live Link
+Hosted in Netlify -> [Quiz Ace](https://quiz-ace.netlify.app/)
 
-In the project directory, you can run:
+## Technologies
+***
+A list of technologies used within the project:
+* [React](https://reactjs.org/): Version 18.2.0
+* [React router](https://reactrouter.com/en/main): Version 6.4.2
+* [React tostify](https://www.npmjs.com/package/react-toastify): Version 9.0.8
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## React Router Dom v6.4 
+Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Resources & Credits
+Tailwind Components -> 
+[Kitwind](https://kitwind.io/products/kometa/components)
 
-### `npm test`
+## QUIZ API LINK:
+* Get all quiz topics: -> (https://openapi.programming-hero.com/api/quiz)
+* Get topic details by topic id: -> (https://openapi.programming-hero.com/api/quiz/${id})
+* Example: -> (https://openapi.programming-hero.com/api/quiz/1)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Other Resources
+* Icon -> [HeroIcon](https://heroicons.com/)
+* Icon Documentation-> [Icon documentaion](https://github.com/tailwindlabs/heroicons)
+* FavIcon -> [Freepic](https://www.freepik.com/)

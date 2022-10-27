@@ -226,26 +226,57 @@ const NavBar = () => {
                                                     FAQ
                                                 </Link>
                                             </li>
-                                            <li>
-                                                <Link
-                                                    to="/login"
-                                                    aria-label="Log-in"
-                                                    title="Log-in"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    Log-in
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    to="/sign-up"
-                                                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-                                                    aria-label="Sign up"
-                                                    title="Sign up"
-                                                >
-                                                    Sign up
-                                                </Link>
-                                            </li>
+                                            {
+                                                user && user?.uid
+                                                    ? <>
+                                                        <li>
+                                                            <Link
+                                                                to="/"
+                                                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-600 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                                aria-label="Sign up"
+                                                                title={user?.displayName ? user?.displayName : 'Annonymous'}
+                                                            >
+                                                                user-Profile
+                                                            </Link>
+                                                        </li>
+                                                        <li onClick={handleSignOut}>
+                                                            <Link
+                                                                to="/login"
+                                                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-600 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                                aria-label="Sign up"
+                                                                title="Log-out"
+                                                            >
+                                                                Log-out
+                                                            </Link>
+                                                        </li>
+                                                    </>
+                                                    : <>
+                                                        <li>
+                                                            <Link
+                                                                to="/login"
+                                                                aria-label="Log-in"
+                                                                title="Log-in"
+                                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                            >
+                                                                Log-in
+                                                            </Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link
+                                                                to="/sign-up"
+                                                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                                                                aria-label="Sign up"
+                                                                title="Sign up"
+                                                            >
+                                                                Sign up
+                                                            </Link>
+                                                        </li>
+                                                    </>
+
+                                            }
+
+
+
                                         </ul>
                                     </nav>
                                 </div>
